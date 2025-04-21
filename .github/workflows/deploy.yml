@@ -4,16 +4,10 @@ on:
   push:
     branches:
       - main 
-      - staging
-      - development
-      - deployment-test
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
-    env:
-      NEXT_PUBLIC_STORYBLOK_PREVIEW_TOKEN: ${{ secrets.NEXT_PUBLIC_STORYBLOK_PREVIEW_TOKEN }}
 
     steps:
       - name: Checkout code
@@ -27,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build QTI Web app
+      - name: Build Web app
         run: npm run build
 
       - name: Zip the app
