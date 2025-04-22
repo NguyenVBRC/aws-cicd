@@ -19,6 +19,7 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
           <li>This updated through CIDC!!</li>
+          <li>This was updated through an AWS Pipeline</li>
         </ol>
 
         <div className={styles.ctas}>
